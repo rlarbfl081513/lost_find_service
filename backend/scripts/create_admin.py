@@ -1,21 +1,26 @@
 # scripts/create_admin.py
 
+import os
 from app.database.session import SessionLocal
 from app.user.model import User
-from app.auth.utils import hashPassword  # ✅ 비밀번호 해시 함수 import
+from app.auth.utils import hashPassword
 
 def createAdmin():
   db = SessionLocal()
 
-  existing = db.query(User).filter(User.username == "A105").first()
+  adminUsername = os.getenv("ADMIN_USERNAME", "admin")
+  adminPassword = os.getenv("ADMIN_PASSWORD", "")
+  adminContact = os.getenv("ADMIN_CONTACT", "")
+
+  existing = db.query(User).filter(User.username == adminUsername).first()
   if existing:
-    print("⚠️ 이미 A105 계정이 존재합니다.")
+    print("⚠️ 이미 관리자 계정이 존재합니다.")
     return
 
   admin = User(
-    username="A105",
-    password=hashPassword("A105@@@@"),  # ✅ 해시된 비밀번호로 저장
-    contact="010-0000-0000",
+    username=adminUsername,
+    password=hashPassword(adminPassword),
+    contact=adminContact,
     is_admin=True
   )
 

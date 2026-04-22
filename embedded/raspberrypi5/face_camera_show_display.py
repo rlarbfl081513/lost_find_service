@@ -17,8 +17,8 @@ cameraDevice = "/dev/video0"           # usb 카메라
 yogiImage = "image.png"                # 요기 사진
 screenWidth = 800
 screenHeight = 480                     # 화면 크기 설정
-wesocketURL = "ws://i13a105.p.ssafy.io:8000/ws/raspberry01"           # 웹소켓 주소
-uploadURL = "https://www.yo9i.store/api/v1/upload/upload_selfie"       # 업로드 주소
+wesocketURL = os.getenv("WEBSOCKET_URL", "")           # 웹소켓 주소
+uploadURL = os.getenv("UPLOAD_SELFIE_URL", "")         # 업로드 주소
 koreanFont = [
   "/usr/share/fonts/truetype/nanum/NanumGothic.ttf",
   "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
@@ -62,7 +62,7 @@ liveStream = threading.Event()
 
 # 현재 요청 컨텍스트
 currentID = None
-currentUser = "testuser"
+currentUser = os.getenv("DEVICE_USER", "")
 
 # ----------- 디스플레이(메인스레드 전용) -----------
 previewName = "Preview"
@@ -182,7 +182,7 @@ def uploadImage(filepath):                             # 이미지 업로드
       print("이미지 로드 실패")
       return None, None
     flippedImage = cv2.flip(img, 1)
-    filename = "testuser_selfie.jpg"
+    filename = os.getenv("DEVICE_USER", "device") + "_selfie.jpg"
     cv2.imwrite(filename, flippedImage)
     try:
       with open(filename, "rb") as f:
@@ -260,7 +260,7 @@ def liveCamera(ws, user: str, reqID: str):
   # 응답 보내기
   resp = {
     "type": "captured",
-    "filename": "testuser_selfie.jpg",
+    "filename": f"{os.getenv('DEVICE_USER', 'device')}_selfie.jpg",
     "req_id": reqID
   }
   try:
@@ -284,7 +284,7 @@ def onMessage(ws, message):
     payload = data.get("payload", data)
     cmd = payload.get("cmd")
     code = payload.get("code")
-    user = "testuser"
+    user = os.getenv("DEVICE_USER", "")
 
     reqID = getID(data)
     print(f"[WS 파싱] cmd={cmd}, code={code}, user={user}, req_id={reqID}")

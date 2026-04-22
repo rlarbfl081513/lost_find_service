@@ -20,14 +20,14 @@ arduinoDelay = 5          # 트리거 후 아두이노 전송까지 시간
 resetDelay = 5            # 작업 완료 후 다음 트리거까지 대기 시간
 
 # 파일명(항상 동일하게 저장/업로드)
-filename = "testuser_product.jpg"
+filename = os.getenv("DEVICE_ID", "device") + "_product.jpg"
 savePath = f"/home/pi/{filename}"
 
 # 업로드 URL
-uploadURL = "https://www.yo9i.store/api/v1/upload/upload_product"
+uploadURL = os.getenv("UPLOAD_URL", "")
 
 # 감지 명령 API URL
-apiURL = "http://i13a105.p.ssafy.io:8000/command/detection"
+apiURL = os.getenv("API_URL", "")
 
 # 크롭 사이즈
 cropWidth, cropHeight = 380, 480
@@ -169,8 +169,8 @@ try:
       ok, _ = uploadImage(savePath)
       # 업로드 직후 POST요청
       sendPost(
-        deviceID="raspberry01",
-        username="testuser",
+        deviceID=os.getenv("DEVICE_ID", ""),
+        username=os.getenv("DEVICE_USER", ""),
         conf=0.3,
       )
       photoTaken = True

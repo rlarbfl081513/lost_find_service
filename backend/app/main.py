@@ -79,7 +79,7 @@ def health_check():
 # DB 초기화.
 initDb()
 
-app.add_middleware(SessionMiddleware, secret_key=os.getenv("SESSION_SECRET_KEY", "secret"))
+app.add_middleware(SessionMiddleware, secret_key=os.getenv("SESSION_SECRET_KEY", ""))
 
 # 라우터 등록
 app.include_router(authRouter)
