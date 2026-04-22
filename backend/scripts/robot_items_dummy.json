@@ -1,0 +1,112 @@
+[
+  {
+    "title": "삼성 S22 보라색 ",
+    "categoryId": 12,
+    "colorId": 7,
+    "imageUrl": "scripts/item_image/1.jpg",
+    "slotId": 4,
+    "status": "보관중",
+    "foundLocation": "지하철 역사",
+    "registeredDate": "2025-07-19",
+    "robotNumber": 101
+  },
+  {
+    "title": "삼성 Z플립 주황",
+    "categoryId": 14,
+    "colorId": 2,
+    "imageUrl": "scripts/item_image/2.jpg",
+    "slotId": 1,
+    "status": "보관중",
+    "foundLocation": "도서관",
+    "registeredDate": "2025-07-18",
+    "robotNumber": 102
+  },
+  {
+    "title": "안경",
+    "categoryId": 6,
+    "colorId": 10,
+    "imageUrl": "scripts/item_image/3.png",
+    "slotId": 6,
+    "status": "보관중",
+    "foundLocation": "도서관",
+    "registeredDate": "2025-07-17",
+    "robotNumber": 103
+  },
+  {
+    "title": "애플 에어팟프로 갈색",
+    "categoryId": 23,
+    "colorId": 8,
+    "imageUrl": "scripts/item_image/4.jpg",
+    "slotId": 9,
+    "status": "보관중",
+    "foundLocation": "공원",
+    "registeredDate": "2025-07-16",
+    "robotNumber": 104
+  },
+  {
+    "title": "지갑 발견",
+    "categoryId": 2,
+    "colorId": 10,
+    "imageUrl": "scripts/item_image/5.jpg",
+    "slotId": 6,
+    "status": "보관중",
+    "foundLocation": "공원",
+    "registeredDate": "2025-07-15",
+    "robotNumber": 105
+  },
+  {
+    "title": "아이폰 pro 주황 발견됨",
+    "categoryId": 19,
+    "colorId": 2,
+    "imageUrl": "scripts/item_image/6.png",
+    "slotId": 3,
+    "status": "보관중",
+    "foundLocation": "카페",
+    "registeredDate": "2025-07-14",
+    "robotNumber": 106
+  },
+  {
+    "title": "삼성 S4 검정색 ",
+    "categoryId": 12,
+    "colorId": 10,
+    "imageUrl": "scripts/item_image/7.jpg",
+    "slotId": 2,
+    "status": "보관중",
+    "foundLocation": "버스 정류장",
+    "registeredDate": "2025-07-13",
+    "robotNumber": 107
+  },
+  {
+    "title": "아이폰 15 초록 발견됨",
+    "categoryId": 17,
+    "colorId": 4,
+    "imageUrl": "scripts/item_image/8.jpg",
+    "slotId": 5,
+    "status": "보관중",
+    "foundLocation": "지하철 역사",
+    "registeredDate": "2025-07-12",
+    "robotNumber": 108
+  },
+  {
+    "title": "버즈 프로 분홍",
+    "categoryId": 20,
+    "colorId": 11,
+    "imageUrl": "scripts/item_image/9.jpg",
+    "slotId": 7,
+    "status": "보관중",
+    "foundLocation": "버스 정류장",
+    "registeredDate": "2025-07-11",
+    "robotNumber": 109
+  },
+  {
+    "title": "시계 발견됨",
+    "categoryId": 4,
+    "colorId": 9,
+    "imageUrl": "scripts/item_image/10.jpg",
+    "slotId": 6,
+    "status": "보관중",
+    "foundLocation": "공원",
+    "registeredDate": "2025-07-10",
+    "robotNumber": 110
+  }
+]

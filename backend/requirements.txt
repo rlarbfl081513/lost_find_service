@@ -1,0 +1,25 @@
+fastapi==0.115.12
+uvicorn==0.34.3
+sqlalchemy==2.0.41
+alembic==1.16.3
+pydantic==2.11.7
+python-multipart==0.0.20
+python-dotenv==1.1.1
+aiofiles==24.1.0
+requests==2.32.4
+passlib==1.7.4
+python-jose==3.3.0
+Authlib==1.6.1
+itsdangerous==2.2.0
+httpx==0.28.1
+# SQLite
+# PostgreSQL 
+psycopg2-binary==2.9.9
+# MySQL
+# pymysql==1.1.0
+
+#pillow==11.2.0
+#opencv-python==4.12.0.88
+# transformers, torch
+#transformers==4.52.4
+#torch==2.7.1+cu118
