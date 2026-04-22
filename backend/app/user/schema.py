@@ -4,13 +4,13 @@ from pydantic import BaseModel, Field
 from datetime import datetime
 
 class UserCreate(BaseModel):
-  username: str = Field(..., example="minwoo123")
-  password: str = Field(..., min_length=8, example="abc@1234")
-  contact: str = Field(..., example="010-1234-5678")
+  username: str = Field(..., min_length=1)
+  password: str = Field(..., min_length=8)
+  contact: str = Field(...)
 
 class UserLogin(BaseModel):
-  username: str = Field(..., example="minwoo123")
-  password: str = Field(..., example="abc@1234")
+  username: str
+  password: str
 
 class UserResponse(BaseModel):
   id: int

@@ -1,6 +1,6 @@
 class ApiEndpoints {
-  // Base
-  static const String baseUrl = 'https://www.yo9i.store';
+  // Base URL은 환경에 맞게 설정하세요 (예: .env 또는 빌드 설정)
+  static const String baseUrl = String.fromEnvironment('BASE_URL', defaultValue: '');
 
   // Version
   static const String version = 'v1';
