@@ -22,13 +22,13 @@
 **팀 구성** : 총 6인 (프론트엔드 1 · 백엔드 2 · 인프라 1 · 임베디드 1)
 
 ### 1. 앱에서 등록된 분실물 검색하기
-![릴레이 화면](./assets/lost-search.png)
+![릴레이 화면](./assets/lost-search.gif)
 ### 2. 필터 기능으로 편리하게 검색하기
-![릴레이 화면](./assets/lost-filter.png)
+![릴레이 화면](./assets/lost-filter.gif)
 ### 3. 분실 신고 등록하기
-![릴레이 화면](./assets/lost-upload.png)
+![릴레이 화면](./assets/lost-upload.gif)
 ### 4. 앱에서 찾은 분실물을 수령하기 위한 지도 기능
-![릴레이 화면](./assets/lost-find.png)
+![릴레이 화면](./assets/lost-find.gif)
 ### + 프로젝트 당시 만든 로봇 실물
 ![릴레이 화면](./assets/lost-robot.png)
 
